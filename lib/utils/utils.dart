@@ -10,6 +10,7 @@ Future<Uint8List> pickImage(ImageSource source) async {
   if (file != null) {
     return await file.readAsBytes();
   }
+  throw imagePicker; // remove
 }
 
 // for displaying snackbars
