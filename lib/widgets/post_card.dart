@@ -32,7 +32,7 @@ class _PostCardState extends State<PostCard> {
     fetchCommentLen();
   }
 
-  fetchCommentLen() async {
+  Future<void> fetchCommentLen() async {
     try {
       QuerySnapshot snap = await FirebaseFirestore.instance
           .collection('posts')
@@ -49,7 +49,7 @@ class _PostCardState extends State<PostCard> {
     setState(() {});
   }
 
-  deletePost(String postId) async {
+  Future<void> deletePost(String postId) async {
     try {
       await FireStoreMethods().deletePost(postId);
     } catch (err) {

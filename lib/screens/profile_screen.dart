@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     getData();
   }
 
-  getData() async {
+  Future<void> getData() async {
     setState(() {
       isLoading = true;
     });

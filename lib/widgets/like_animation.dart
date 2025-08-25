@@ -43,7 +43,7 @@ class _LikeAnimationState extends State<LikeAnimation>
     }
   }
 
-  startAnimation() async {
+  Future<void> startAnimation() async {
     if (widget.isAnimating || widget.smallLike) {
       await controller.forward();
       await controller.reverse();
